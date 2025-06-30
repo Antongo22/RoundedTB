@@ -1,4 +1,4 @@
-﻿<Window x:Class="RoundedTB.AboutWindow"
+<Window x:Class="RoundedTB.AboutWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,119 +8,119 @@
         mc:Ignorable="d"
         Style="{StaticResource UiWindow}"
         Background="#20808080"
-        Title="RoundedTB - About" Height="616" Width="500"
+        Title="RoundedTB - О программе" Height="616" Width="500"
         Visibility ="Visible" ResizeMode="NoResize" Opacity="1.001">
     <Grid>
 
         <Image x:Name="bannerMst" Visibility ="Hidden" HorizontalAlignment="Center" Height="128" VerticalAlignment="Top"  Opacity="0.8" Source="res\HeadBanner.png" Width="500" Stretch="UniformToFill" Margin="0,-16,0,0"/>
         <Image x:Name="bannerDev" Visibility ="Hidden" HorizontalAlignment="Center" Height="128" VerticalAlignment="Top"  Opacity="0.8" Source="res\HeadBannerDev.png" Width="500" Stretch="UniformToFill" Margin="0,-16,0,0"/>
         <Image x:Name="bannerCan" Visibility ="Visible" HorizontalAlignment="Center" Height="146" VerticalAlignment="Top"  Opacity="0.8" Source="res\HeadBannerCan.png" Width="500" Stretch="UniformToFill" Margin="0,-16,0,0"/>
-        <Button x:Name="okButton" Content="OK" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="85" Click="okButton_Click" FontWeight="Normal"/>
-        <TextBlock x:Name="titleBlock" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Welcome to RoundedTB!" VerticalAlignment="Top" FontWeight="Normal" FontFamily="Segoe UI Semibold" FontSize="36" Opacity="0.795"/>
+        <Button x:Name="okButton" Content="ОК" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="85" Click="okButton_Click" FontWeight="Normal"/>
+        <TextBlock x:Name="titleBlock" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Добро пожаловать в RoundedTB!" VerticalAlignment="Top" FontWeight="Normal" FontFamily="Segoe UI Semibold" FontSize="36" Opacity="0.795"/>
         <TextBlock x:Name="subtitleBlock" HorizontalAlignment="Left" Margin="10,85,0,0" TextWrapping="Wrap" Text="Canary" VerticalAlignment="Top" FontWeight="Normal" FontFamily="Segoe UI Semibold" FontSize="22" Opacity="0.795" Height="30"/>
 
-        <wpfui:TitleBar x:Name="aboutTitleBar" Grid.Row="0" NotifyIconTooltip="RoundedTB" ApplicationNavigation="True" Title="RoundedTB - About" Icon="pack://application:,,,/RoundedTBCanary.ico" Height="51" ShowMaximize="False"/>
+        <wpfui:TitleBar x:Name="aboutTitleBar" Grid.Row="0" NotifyIconTooltip="RoundedTB" ApplicationNavigation="True" Title="RoundedTB - О программе" Icon="pack://application:,,,/RoundedTBCanary.ico" Height="51" ShowMaximize="False"/>
 
 
         <TextBlock x:Name="bodyBlockMain" Margin="10,134,10,0" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI SemiBold" FontSize="14" Height="37" VerticalAlignment="Top">
-            <Bold>Thanks for downloading RoundedTB. Expand the following categories for more information.</Bold>
+            <Bold>Спасибо за загрузку RoundedTB. Разверните следующие категории для получения дополнительной информации.</Bold>
         </TextBlock>
 
         <ScrollViewer Margin="0,176,0,0" VerticalScrollBarVisibility="Hidden" Height="378" VerticalAlignment="Top">
             <StackPanel Width="473">
-                <Expander x:Name="expander0" HorizontalAlignment="Center" Header="What's new" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander0" HorizontalAlignment="Center" Header="Что нового" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <Grid>
                         <TextBlock Margin="0,5,0,0" x:Name="bodyBlock0" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Opacity="0.8" LineHeight="23">            
-                    • Nobody knows. Some say secrets lie amongst these builds. And bugs. Honestly, I'm pretty sure they're 90% bug. 95%. 98%. Actually the fact you're even seeing this text is probably a bug. idk tbh, i give up
+                    • Никто не знает. Некоторые говорят, что в этих сборках скрыты секреты. И ошибки. Честно говоря, я почти уверен, что они на 90% состоят из ошибок. 95%. 98%. На самом деле то, что вы вообще видите этот текст, вероятно, тоже ошибка. Не знаю, честно говоря, я сдаюсь
                     <LineBreak/>
-                    <Bold>REMINDER: Autohide is currently rather buggy and must be entirely disabled in Windows.</Bold>
+                    <Bold>НАПОМИНАНИЕ: Функция автоскрытия сейчас содержит ошибки и должна быть полностью отключена в Windows.</Bold>
                     <LineBreak/>
                         </TextBlock>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander1" HorizontalAlignment="Center" Header="About basic options" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander1" HorizontalAlignment="Center" Header="Об основных опциях" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <Grid>
                         <TextBlock Margin="0,5,0,0" x:Name="bodyBlock1" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Opacity="0.8" LineHeight="23">
-                    <Bold>• Margin</Bold> - makes the taskbar slimmer on all sides by this many logical pixels.
+                    <Bold>• Отступ</Bold> - делает панель задач тоньше со всех сторон на указанное количество логических пикселей.
                     <LineBreak/>
-                    <Bold>• Corner radius</Bold> - controls the radius of the taskbar's rounded corners.
+                    <Bold>• Радиус скругления</Bold> - определяет радиус закругления углов панели задач.
                     <LineBreak/>
-                    <Bold>• Advanced</Bold> - toggles a menu of advanced and experimental features.
+                    <Bold>• Дополнительно</Bold> - открывает меню расширенных и экспериментальных функций.
                     <LineBreak/>
-                    <Bold>• Apply</Bold> - applies and saves any unset changes.
+                    <Bold>• Применить</Bold> - применяет и сохраняет все внесенные изменения.
                     <LineBreak/>
                         </TextBlock>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander2" HorizontalAlignment="Center" Header="About advanced options" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander2" HorizontalAlignment="Center" Header="О расширенных опциях" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <Grid>
                         <TextBlock Margin="0,5,0,0" x:Name="bodyBlock2" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Opacity="0.8" LineHeight="23">
-                    <Bold>• [...] Margins</Bold> - individually sets the margin for each side of the taskbar.
+                    <Bold>• [...] Отступы</Bold> - индивидуальная настройка отступов для каждой стороны панели задач.
                     <LineBreak/>
-                    <Bold>• Dynamic mode (Windows 11)</Bold> - Dynamically adjusts the size of the taskbar depending on how many apps are open.
+                    <Bold>• Динамический режим (Windows 11)</Bold> - Динамически регулирует размер панели задач в зависимости от количества открытых приложений.
                     <LineBreak/>
-                    <Bold>• Split mode (Windows 10)</Bold> - allows you to resize the taskbar. Like dynamic mode, but manually adjustable; some setup is required, enable for more info.
+                    <Bold>• Режим разделения (Windows 10)</Bold> - позволяет изменять размер панели задач. Подобно динамическому режиму, но с ручной регулировкой; требуется некоторая настройка, включите для получения дополнительной информации.
                     <LineBreak/>
-                    <Bold>• Show system tray</Bold> - Displays the system tray in dynamic/split mode. This option can be toggled at any time by pressing <Bold>Win+F2</Bold>.
+                    <Bold>• Показывать системный трей</Bold> - Отображает системный трей в динамическом режиме/режиме разделения. Эту опцию можно переключать в любое время, нажав <Bold>Win+F2</Bold>.
                     <LineBreak/>
-                    <Bold>• Show system tray on hover</Bold> - Displays the system tray in dynamic/split mode when the mouse hovers over it. This overrides the above option.
+                    <Bold>• Показывать системный трей при наведении</Bold> - Отображает системный трей в динамическом режиме/режиме разделения при наведении на него курсора мыши. Эта опция переопределяет предыдущую.
                     <LineBreak/>
-                    <Bold>• TranslucentTB compatibility</Bold> - enables compatibility with TranslucentTB. For more info, enable this option.
+                    <Bold>• Совместимость с TranslucentTB</Bold> - включает совместимость с TranslucentTB. Для получения дополнительной информации включите эту опцию.
                     <LineBreak/>
-                    <Bold>• Fill taskbar when maximised</Bold> - Fills the taskbar when a window is maximised on that taskbar's monitor.
+                    <Bold>• Заполнять панель задач при развёрнутом окне</Bold> - Заполняет панель задач, когда окно развёрнуто на мониторе с этой панелью задач.
                     <LineBreak/>
-                    <Bold>• Fill taskbar on alt+tab (Windows 11)</Bold> - Fills taskbars when alt+tab or the Task Switcher is invoked.
+                    <Bold>• Заполнять панель задач при alt+tab (Windows 11)</Bold> - Заполняет панель задач при вызове alt+tab или переключателя задач.
                     <LineBreak/>
                         </TextBlock>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander3" HorizontalAlignment="Center" Header="Known issues" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander3" HorizontalAlignment="Center" Header="Известные проблемы" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <Grid>
                         <TextBlock Margin="0,5,0,0" x:Name="bodyBlock3" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Opacity="0.8" LineHeight="23">
-                    • Using RoundedTB with Windows' autohide feature can result in heavy flickering, bugs, an inability to access the taskbar and isn't supported. An upcoming version of RoundedTB will introduce a custom autohide feature that will work correctly.
+                    • Использование RoundedTB с функцией автоскрытия Windows может привести к сильному мерцанию, ошибкам, невозможности доступа к панели задач и не поддерживается. В будущей версии RoundedTB будет представлена собственная функция автоскрытия, которая будет работать корректно.
                     <LineBreak/>
-                    • Dynamic mode and split mode only work correctly when the taskbar is at the top or bottom of the monitor.
+                    • Динамический режим и режим разделения работают корректно только когда панель задач находится вверху или внизу экрана.
                     <LineBreak/>
-                    • Split mode on Windows 10 is currently only supported on the primary monitor.
+                    • Режим разделения на Windows 10 в настоящее время поддерживается только на основном мониторе.
                     <LineBreak/>
-                    • Taskbar mods other than TranslucentTB are not yet officially supported. Let me know if you run into compatibility issues with other taskbar mods/tweaks.
+                    • Моды для панели задач, кроме TranslucentTB, пока официально не поддерживаются. Сообщите мне, если у вас возникнут проблемы совместимости с другими модами/твиками для панели задач.
                     <LineBreak/>
-                    • When using dynamic mode, the taskbar may occasionally become too large, too small or not update. This can usually be fixed by moving a window to or from that monitor or briefly changing the taskbar alignment. These issues will be reduced in upcoming updates.
+                    • При использовании динамического режима панель задач иногда может стать слишком большой, слишком маленькой или не обновляться. Обычно это можно исправить, переместив окно на этот монитор или с него, или ненадолго изменив выравнивание панели задач. Эти проблемы будут устранены в будущих обновлениях.
                         <LineBreak/>
                         </TextBlock>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander4" HorizontalAlignment="Center" Header="Help and information" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander4" HorizontalAlignment="Center" Header="Помощь и информация" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <Grid>
                         <TextBlock Margin="0,5,0,0" x:Name="bodyBlock4" TextWrapping="Wrap" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Opacity="0.8" LineHeight="21">
-                    • More in-depth instructions, tips and tricks are available in the 
+                    • Более подробные инструкции, советы и хитрости доступны в 
                     <Hyperlink NavigateUri="https://github.com/torchgm/RoundedTB#readme" RequestNavigate="Hyperlink_RequestNavigate">
                         README
                     </Hyperlink>.
                     <LineBreak/>
-                    • If you're having any issues, or just want to talk about RoundedTB, feel free to join
+                    • Если у вас есть какие-либо проблемы, или вы просто хотите поговорить о RoundedTB, присоединяйтесь к
                     <Hyperlink NavigateUri="https://discord.gg/wYQJd8VGSB" RequestNavigate="Hyperlink_RequestNavigate">
-                        the official Discord server
+                        официальному серверу Discord
                     </Hyperlink>.
                     <LineBreak/>
-                    • If you want to browse the source code, file an issue or suggest a feature, check out
+                    • Если вы хотите изучить исходный код, сообщить о проблеме или предложить функцию, посетите
                     <Hyperlink NavigateUri="https://github.com/torchgm/RoundedTB" RequestNavigate="Hyperlink_RequestNavigate">
-                        the RoundedTB GitHub repository
+                        репозиторий RoundedTB на GitHub
                     </Hyperlink>.
                     <LineBreak/>
                     <LineBreak/>
-                    RoundedTB is licensed under the 
+                    RoundedTB распространяется под лицензией 
                     <Hyperlink NavigateUri="https://github.com/torchgm/RoundedTB/blob/master/LICENSE" RequestNavigate="Hyperlink_RequestNavigate">
                         GNU General Public License v3.0
-                    </Hyperlink>. By using the software, you agree to accepting the terms of this license.
+                    </Hyperlink>. Используя данное программное обеспечение, вы соглашаетесь с условиями этой лицензии.
                     <LineBreak/>
                         </TextBlock>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander5" HorizontalAlignment="Center" Header="Debug" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
+                <Expander x:Name="expander5" HorizontalAlignment="Center" Header="Отладка" VerticalAlignment="Top" Width="480" FontSize="16" FontFamily="Segoe UI Semibold">
                     <StackPanel>
-                        <Button x:Name="configButton" Content="Open config file" Margin="0,10,0,0" Click="configButton_Click"/>
-                        <Button x:Name="logButton" Content="Open log file" Margin="0,10,0,0" Click="logButton_Click"/>
+                        <Button x:Name="configButton" Content="Открыть файл конфигурации" Margin="0,10,0,0" Click="configButton_Click"/>
+                        <Button x:Name="logButton" Content="Открыть лог-файл" Margin="0,10,0,0" Click="logButton_Click"/>
                     </StackPanel>
                 </Expander>
             </StackPanel>
