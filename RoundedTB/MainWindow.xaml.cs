@@ -1,4 +1,4 @@
-﻿using IWshRuntimeLibrary;
+using IWshRuntimeLibrary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -152,7 +152,9 @@ namespace RoundedTB
                 activeSettings.IsWindows11 = false;
             }
             // Default settings
-            if (activeSettings == null)
+            if (activeSettings == null || activeSettings.SimpleTaskbarLayout == null ||
+                activeSettings.DynamicAppListLayout == null || activeSettings.DynamicTrayLayout == null || 
+                activeSettings.DynamicWidgetsLayout == null)
             {
                 
                 if (isWindows11) // Default settings for Windows 11
